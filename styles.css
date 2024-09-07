@@ -9,7 +9,7 @@ body, html {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgb(168,129,93);
+    background-image: linear-gradient(#ff9900, #b28300);
 }
 
 .header{
@@ -19,7 +19,7 @@ body, html {
     justify-content: center;
     font-family: 'Brush Script MT', cursive;
     color: gold;
-    font-size: 48px;
+    font-size: 64px;
 }
 
 .etch{
@@ -29,27 +29,35 @@ body, html {
     padding: 50px;
     border-style: solid;
     border-radius: 40px;
+    box-shadow: 10px 5px 20px black;
+    justify-content: center;
+    align-items: center;
 }
 
 .gridContainer{
-    height: 1200px;
-    width: 1200px;
+    height: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 3px black;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
 }
 
 .columnContainer{
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .square{
     border: 1px solid black;
     background-color: rgb(211, 208, 208);
-    /* height: 20px;
-    width: 20px; */
     display: flex;
     height: 100%;
     width: 100%;
@@ -57,18 +65,28 @@ body, html {
 
 .knobs{
     display: flex;
-    justify-content: space-between;
     margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .knob{
     display: flex;
-    height: 100px;
-    width: 100px;
-    background-color: white;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(230, 229, 229);
     border-style: solid;
     border-radius: 50%;
     margin: 0;
+    box-shadow: 5px 5px 10px black;
+    
+}
+
+.credit{
+    font-family: 'Brush Script MT', cursive;
+    color: gold;
+    font-size: 18px;
 }
 
 .menu{
@@ -82,12 +100,13 @@ body, html {
     border-radius: 40px;
     gap: 10px;
     border-style: solid;
+    box-shadow: 10px 5px 20px black;
 }
 
 p{
     font-family: 'Brush Script MT', cursive;
     color: gold;
-    font-size: 48px;
+    font-size: 46px;
     text-align: center;
 }
 
@@ -97,6 +116,7 @@ button{
     border-radius: 10px;
     padding: 5px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
+    box-shadow: inset 0 0 3px black;
 }
 

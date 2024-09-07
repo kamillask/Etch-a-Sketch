@@ -1,10 +1,21 @@
 const container = document.querySelector(".gridContainer");
 const defaultRows = 16;
 let currentRows = defaultRows;
+let rainbow = false;
+let color = "black"
+
+function randomColor(){
+    return ((Math.random()*255)+1).toFixed(0) + ", " + ((Math.random()*255)+1).toFixed(0) + ", " + ((Math.random()*255)+1).toFixed(0);
+}
 
 //FILL SQUARE FUNCTION
 function fillSquare(square){
-    square.setAttribute("style", "background: red;");
+    if(rainbow===false){
+        square.style.backgroundColor = color;
+    } else{
+        square.style.backgroundColor = "rgb(" + randomColor() + ")";
+    }
+    
 }
 
 //RESET FUNCTION
@@ -19,6 +30,7 @@ function resetGrid(){
 const resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", () => {
     resetGrid();
+    rainbow = false;
 });
 
 //CHANGE GRID SIZE
@@ -40,6 +52,12 @@ changeGridButton.addEventListener("click", () => {
         currentRows = Number(size);
     }
     
+});
+
+//RAINBOW BUTTON
+const rainbowButton = document.querySelector("#rainbow");
+rainbowButton.addEventListener("click", () => {
+    rainbow = true;
 });
 
 
